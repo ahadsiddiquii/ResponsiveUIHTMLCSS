@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">C100<span>thinktank</span></a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
+        <ul class = "navigation">
+            <li><a href="#banner">Home</a></li>
+            <li><a href="#thinktank">ThinkTank</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#members">Members</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#forum">Forum</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#register">Register</a></li>
+        </ul>
+    </header>
+    <section class="banner" id="banner">
+        <div class="content">
+            <h2>Influencing public policy decisions to create sustainable impact
+            </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint beatae totam eius ipsa tempora porro ea voluptas amet? </p>
+            <a href="#" class="btn">Discover More</a>
+            <a href="#" class="btn">Why C100?</a>
+        </div>
+    </section>
+    <div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+    </div>
+    <script type="text/javascript">
+        window.addEventListener('scroll',function(){
+            const header = document.querySelector('header');
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
